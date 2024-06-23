@@ -7,11 +7,166 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            background-color: rgba(3, 169, 244, 0.2509803922);
-            padding: 10px 0px 10px 10px;
+            padding: 5px 0px 5px 5px;
             text-transform: capitalize;
+            border: 2px dotted #03a9f4;
         }
+        .education-journey {
+            margin-top: 10px;
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+                background-color: #03a9f440;
+                border-left: 7px solid #03a9f4;
+                padding: 10px 0px 10px 10px;
+                text-transform: capitalize;
+            }
+
+            .timeline {
+              position: relative;
+              margin: 0 auto;
+              max-width: 800px;
+              padding: 0 2em;
+
+              &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 4px;
+                background: linear-gradient(180deg, #4A90E2, #50E3C2);
+                transform: translateX(-50%);
+              }
+
+              .education-step {
+                position: relative;
+                padding: 1.5em 0;
+                text-align: center;
+
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 50%;
+                  width: 1.5em;
+                  height: 1.5em;
+                  background-color: #fff;
+                  border: 4px solid #4A90E2;
+                  border-radius: 50%;
+                  transform: translateX(-50%);
+                }
+
+                .time {
+                  font-size: 1.4em;
+                  font-weight: bold;
+                  margin-bottom: 0.5em;
+                  color: #4A90E2;
+                }
+
+                .degree-field {
+                  font-size: 1.2em;
+                  margin-bottom: 0.5em;
+                  color: #333;
+                }
+
+                .school {
+                  font-size: 1em;
+                  color: #777;
+                }
+              }
+
+              .education-step:nth-child(odd) {
+                text-align: right;
+
+                .time, .degree-field, .school {
+                  text-align: right;
+                  margin-right: 55%;
+                }
+
+                &:before {
+                  left: calc(50% - 5px);
+                }
+              }
+
+              .education-step:nth-child(even) {
+                text-align: left;
+
+                .time, .degree-field, .school {
+                  text-align: left;
+                  margin-left: 55%;
+                }
+
+                &:before {
+                  left: calc(50% - 5px);
+                }
+              }
+            }
+
+            @media screen and (max-width: 768px) {
+              .timeline {
+                padding: 0 1em;
+
+                &:before {
+                  left: 20px;
+                  transform: none;
+                }
+
+                .education-step {
+                  text-align: left;
+                  padding-left: 40px;
+
+                  &:before {
+                    left: 0;
+                  }
+
+                  .time, .degree-field, .school {
+                    text-align: left;
+                    margin-left: 0;
+                    margin-right: 0;
+                  }
+
+                  .time, .degree-field {
+                    margin-bottom: 0.2em;
+                  }
+                }
+
+                .education-step:nth-child(odd), .education-step:nth-child(even) {
+                  text-align: left;
+                }
+              }
+            }
+
+            @media screen and (max-width: 480px) {
+              .title {
+                font-size: 2em;
+              }
+
+              .timeline {
+                padding: 0 0.5em;
+
+                .education-step {
+                  padding: 1em 0;
+
+                  .time {
+                    font-size: 1.2em;
+                  }
+
+                  .degree-field {
+                    font-size: 1em;
+                  }
+
+                  .school {
+                    font-size: 0.9em;
+                  }
+                }
+              }
+            }
+          }
+
+
     }
+
 
 }
 
