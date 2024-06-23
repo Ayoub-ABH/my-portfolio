@@ -1,5 +1,19 @@
 /***********************************C.V*********************************************/
 .cv{
     margin: 40px 70px 0px;
+    .cv-container{
+        margin-top: 60px;
+        .my-cv-file{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: rgba(3, 169, 244, 0.2509803922);
+            padding: 10px 0px 10px 10px;
+            text-transform: capitalize;
+        }
+    }
+
 }
+
+
 /***********************************C.V*********************************************/

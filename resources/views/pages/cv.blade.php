@@ -12,6 +12,23 @@
 
 
         <div class="cv-container">
+            <div class="title my-cv-file">
+                <h4>here donwload my CV</h4>
+                <p>
+                    <button>Download</button>
+                </p>
+            </div>
+            <div class="education-journey">
+                <div>
+                    .
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+            </div>
         </div>
 
     </div>
