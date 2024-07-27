@@ -87,7 +87,7 @@
   font-size: 16px;
   padding: 8px 40px;
   margin-bottom: 7px;
-  border-radius: 14px 0px;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 .app .header .navs ul li a .icon {
@@ -113,7 +113,7 @@
 .app .header .navs ul li .active-nav {
   background-color: #d4e4f9;
   border: 1px solid cornflowerblue;
-  border-radius: 14px 0px;
+  border-radius: 10px;
 }
 .app .container {
   margin-left: 277px;
@@ -582,7 +582,9 @@
 .cv .cv-container .education-journey .timeline .education-step:nth-child(odd) {
   text-align: right;
 }
-.cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .time, .cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .degree-field, .cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .school {
+.cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .time,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .degree-field,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .school {
   text-align: right;
   margin-right: 55%;
 }
@@ -592,7 +594,9 @@
 .cv .cv-container .education-journey .timeline .education-step:nth-child(even) {
   text-align: left;
 }
-.cv .cv-container .education-journey .timeline .education-step:nth-child(even) .time, .cv .cv-container .education-journey .timeline .education-step:nth-child(even) .degree-field, .cv .cv-container .education-journey .timeline .education-step:nth-child(even) .school {
+.cv .cv-container .education-journey .timeline .education-step:nth-child(even) .time,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(even) .degree-field,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(even) .school {
   text-align: left;
   margin-left: 55%;
 }
@@ -614,40 +618,85 @@
   .cv .cv-container .education-journey .timeline .education-step:before {
     left: 0;
   }
-  .cv .cv-container .education-journey .timeline .education-step .time, .cv .cv-container .education-journey .timeline .education-step .degree-field, .cv .cv-container .education-journey .timeline .education-step .school {
+  .cv .cv-container .education-journey .timeline .education-step .time,
+.cv .cv-container .education-journey .timeline .education-step .degree-field,
+.cv .cv-container .education-journey .timeline .education-step .school {
     text-align: left;
     margin-left: 0;
     margin-right: 0;
   }
-  .cv .cv-container .education-journey .timeline .education-step .time, .cv .cv-container .education-journey .timeline .education-step .degree-field {
+  .cv .cv-container .education-journey .timeline .education-step .time,
+.cv .cv-container .education-journey .timeline .education-step .degree-field {
     margin-bottom: 0.2em;
   }
-  .cv .cv-container .education-journey .timeline .education-step:nth-child(odd), .cv .cv-container .education-journey .timeline .education-step:nth-child(even) {
+  .cv .cv-container .education-journey .timeline .education-step:nth-child(odd) {
     text-align: left;
+  }
+  .cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .time,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .degree-field,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(odd) .school {
+    text-align: left;
+    margin: 0;
+  }
+  .cv .cv-container .education-journey .timeline .education-step:nth-child(odd):before {
+    border: 4px solid blue;
+  }
+  .cv .cv-container .education-journey .timeline .education-step:nth-child(even) {
+    text-align: left;
+  }
+  .cv .cv-container .education-journey .timeline .education-step:nth-child(even) .time,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(even) .degree-field,
+.cv .cv-container .education-journey .timeline .education-step:nth-child(even) .school {
+    text-align: left;
+    margin: 0;
+  }
+  .cv .cv-container .education-journey .timeline .education-step:nth-child(even):before {
+    border: 4px solid red;
   }
 }
 @media screen and (max-width: 480px) {
-  .cv .cv-container .education-journey .title {
-    font-size: 2em;
-  }
   .cv .cv-container .education-journey .timeline {
-    padding: 0 0.5em;
+    position: relative;
+    margin: 20px 0px;
+  }
+  .cv .cv-container .education-journey .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 27px;
+    bottom: 0;
+    width: 4px;
+    background: #4A90E2;
   }
   .cv .cv-container .education-journey .timeline .education-step {
-    padding: 1em 0;
+    padding-left: 36px;
   }
-  .cv .cv-container .education-journey .timeline .education-step .time {
-    font-size: 1.2em;
-  }
-  .cv .cv-container .education-journey .timeline .education-step .degree-field {
-    font-size: 1em;
-  }
-  .cv .cv-container .education-journey .timeline .education-step .school {
-    font-size: 0.9em;
+  .cv .cv-container .education-journey .timeline .education-step:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: #fff;
+    border-radius: 50%;
   }
 }
 
 /***********************************C.V*********************************************/
+.realisations {
+  margin: 40px 70px 0px;
+}
+.realisations .realisations-container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.realisations .realisations-container .realisation {
+  width: 47%;
+}
+
 .contact {
   margin: 40px 70px 0px;
 }
@@ -714,6 +763,9 @@
   .about-me {
     margin: 40px 40px 0px;
   }
+  .cv {
+    margin: 40px 40px 0px;
+  }
 }
 @media only screen and (max-width: 425px) {
   .presentation-img img {
@@ -723,6 +775,9 @@
   .about-me {
     margin: 40px 20px 0px;
   }
+  .cv {
+    margin: 40px 20px 0px;
+  }
 }
 @media only screen and (max-width: 320px) {
   .presentation-img img {
@@ -730,6 +785,9 @@
     height: auto;
   }
   .about-me {
+    margin: 40px 15px 0px;
+  }
+  .cv {
     margin: 40px 15px 0px;
   }
 }
