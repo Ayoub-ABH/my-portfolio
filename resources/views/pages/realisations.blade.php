@@ -15,7 +15,7 @@
             <div class="realisation">
                 <div class="head">
                     <div class="img">
-                        <img src= alt="{{ asset("storage/profile.jpg") }}" alt="projet">
+                        <img src="{{ asset("storage/profile.jpg") }}" alt="projet">
                     </div>
                     <div class="title">
                         Student docs
@@ -28,7 +28,7 @@
             <div class="realisation">
                 <div class="head">
                     <div class="img">
-                        <img src= alt="{{ asset("storage/profile.jpg") }}" alt="projet">
+                        <img src="{{ asset("storage/profile.jpg") }}" alt="projet">
                     </div>
                     <div class="title">
                         Student docs
@@ -41,7 +41,7 @@
             <div class="realisation">
                 <div class="head">
                     <div class="img">
-                        <img src= alt="{{ asset("storage/profile.jpg") }}" alt="projet">
+                        <img src="{{ asset("storage/profile.jpg") }}" alt="projet">
                     </div>
                     <div class="title">
                         Student docs
@@ -54,7 +54,7 @@
             <div class="realisation">
                 <div class="head">
                     <div class="img">
-                        <img src= alt="{{ asset("storage/profile.jpg") }}" alt="projet">
+                        <img src="{{ asset("storage/profile.jpg") }}" alt="projet">
                     </div>
                     <div class="title">
                         Student docs
